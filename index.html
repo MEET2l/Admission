@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmisssion</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+<style>
+/* ==================== Hero Section CSS ==================== */
+.admission-hero {
+  padding: 80px 0;
+  background: linear-gradient(to right, #ffe29f, #ffd071);
+  color: #1a1a1a;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 25px;
+  margin-right: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #e68a00;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #ff9800;
+  border: 2px solid #ff9800;
+}
+
+.btn-secondary:hover {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ========================= Why Choose Kreedo Section ========================= */
+  .why-kredo {
+    background-color: #f9f9f9;
+    padding: 80px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .why-kredo .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .why-kredo h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 10px;
+  }
+
+  .why-kredo .subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 50px;
+  }
+
+  .why-kredo .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .why-kredo .feature {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .why-kredo .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  }
+
+  .why-kredo .feature .icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .why-kredo .feature h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #111827;
+  }
+
+  .why-kredo .feature p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .why-kredo .features {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .why-kredo .feature {
+      width: 80%;
+    }
+  }
+/* ========================= Programs Offered Timeline Section ========================= */
+  .programs-timeline {
+    background: linear-gradient(120deg, #fef3c7, #dbeafe);
+    padding: 80px 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+
+  .programs-timeline h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1f2937;
+  }
+
+  .programs-timeline .subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 60px;
+  }
+
+  .timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 5%;
+    width: 90%;
+    height: 4px;
+    background: #1d4ed8;
+    border-radius: 2px;
+    z-index: 0;
+  }
+
+  .timeline-item {
+    position: relative;
+    width: 22%;
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 40px;
+  }
+
+  .age-circle {
+    background: #1d4ed8;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .timeline-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #111827;
+  }
+
+  .timeline-content p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .timeline-item {
+      width: 45%;
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .timeline {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .timeline::before {
+      width: 4px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      width: 80%;
+    }
+
+    .age-circle {
+      margin-bottom: 10px;
+    }
+  }
+
+/* ========================= Admission section  ========================= */
+
+.admission-banner {
+  background: linear-gradient(90deg, #fef3c7, #dbeafe);
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.admission-banner h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.admission-banner .subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.admission-steps {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admission-steps .step {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 25px 15px;
+  width: 22%;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.admission-steps .step:hover {
+  transform: translateY(-10px);
+  background-color: #fffbeb;
+}
+
+.admission-steps .step .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.admission-steps .step:hover .icon {
+  transform: scale(1.3) rotate(10deg);
+}
+
+.admission-steps .step .step-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1d4ed8;
+  margin-bottom: 10px;
+}
+
+.admission-steps .step p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .admission-steps .step {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admission-steps .step {
+    width: 90%;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+<section>
+    <div class="top-bar">
+        Call us @ +91 1800 4120 1580
+    </div>
+</section>
+<!-- ============================ navbar =============================== -->
+<section>
+  <div class="container">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./assets/logo.png" alt="Spacece Logo">
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <!-- Programs -->
+            <li class="dropdown">
+                <a href="#">Programs <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="./Programs/start_your_school.html">Start Your School</a></li>
+                    <li><a href="./Programs/upgrade_your_school.html">Upgrade Your School</a></li>
+                    <li><a href="./Programs/parents_toddler_program.html">Parents & Toddler Program</a></li>
+                </ul>
+            </li>
+
+            <!-- PTTC -->
+            <li><a href="PTTC.html">PTTC</a></li>
+
+            <!-- Admissions -->
+            <li class="dropdown">
+                <a href="Admission.html">Admissions</a>
+            </li>
+
+            <!-- About Us -->
+            <li class="dropdown">
+                <a href="Aboutus.html">About Us <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="./Aboutus/Contactus.html">Contact Us</a></li>
+                    <li><a href="./Aboutus/Our_vision.html">Our Vision & Mission</a></li>
+                    <li><a href="./Aboutus/Our_Team.html">Our Team</a></li>
+                </ul>
+            </li>
+
+            <!-- Resources -->
+            <li class="dropdown">
+                <a href="Resources.html">Resources <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="./Resources/Blogs.html">Blogs</a></li>
+                    <li><a href="./Resources/Parent_guides.html">Parent Guides</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+
+        <!-- Enquire Button -->
+        <a class="enquire-btn" href="javascript:void(0)" onclick="openPopup()">Enquire Now</a>
+
+        <!-- POPUP OVERLAY -->
+        <div class="popup-overlay" id="popup">
+            <div class="popup-box">
+
+                <!-- Close Button -->
+                <button class="close-popup" onclick="closePopup()">×</button>
+
+                <!-- ZOHO FORM STARTS HERE -->
+                <form action="https://forms.zohopublic.com/kidoenterprises/form/KreedoWebsiteContactUsForm/formperma/UxHWZ_P2f6BEfg5Q5jJFP8txtfC_XkHyoDowK3rbSIA/htmlRecords/submit"
+                    name="form" method="POST" id="form" accept-charset="UTF-8" class="enquire_form">
+
+
+                    <h2>Please fill out the form below and we will respond within 24hrs</h2>
+
+                    <!-- Hidden UTM Fields -->
+                    <input type="hidden" name="zf_referrer_name">
+                    <input type="hidden" name="zf_redirect_url">
+                    <input type="hidden" name="zc_gad">
+                    <input type="hidden" name="utm_source" id="utm_source">
+                    <input type="hidden" name="utm_medium" id="utm_medium">
+                    <input type="hidden" name="utm_campaign" id="utm_campaign">
+                    <input type="hidden" name="utm_device" id="utm_device">
+                    <input type="hidden" name="utm_Adgroup" id="utm_Adgroup">
+                    <input type="hidden" name="gclid" id="gclid">
+                    <input type="hidden" name="referrername" id="referrername">
+
+                    <!-- Inputs -->
+                    <input type="text" name="SingleLine" placeholder="Enter your name" required>
+                    <input type="email" name="Email" placeholder="Enter Your Email" required>
+                    <input type="text" name="PhoneNumber_countrycode" pattern="[0-9]{10}" placeholder="Number" required>
+
+                    <select name="Dropdown" required>
+                        <option value="">Select State</option>
+                        <option>Maharashtra</option>
+                        <option>Gujarat</option>
+                    </select>
+
+                    <select name="Dropdown1" required>
+                        <option value="">Category</option>
+                        <option value="Individual">Starting a new school</option>
+                        <option value="K-12 School">Upgrading my school</option>
+                        <option value="Teacher">Interested in Teacher Training Course</option>
+                    </select>
+
+                    <textarea name="MultiLine" placeholder="Message"></textarea>
+
+                    <!-- Captcha -->
+                    <span id="captchaText">IqOmSl</span>
+                    <input type="text" placeholder="Enter the above text" required>
+
+                    <!-- Checkbox -->
+                    <label class="check-label">
+                        <input type="checkbox" checked>
+                        Please contact me via WhatsApp, SMS, Phone, and Email
+                    </label>
+
+                    <!-- Submit -->
+                    <button class="zf-submitColor">Submit</button>
+                </form>
+                <!-- 🔥 ZOHO FORM ENDS HERE -->
+            </div>
+        </div>
+
+
+        <!-- Mobile Menu Icon -->
+        <!-- <button class="menu-btn" onclick="openMenu()">☰</button> -->
+        <button class="menu-btn">☰</button>
+    </nav>
+
+    <!-- BLACK OVERLAY -->
+    <!-- <div class="overlay" onclick="closeMenu()"></div> -->
+     <div class="overlay"></div>
+
+    <!-- SIDEBAR -->
+    <nav class="menu_btn_info">
+        <button class="close-btn">×</button>
+
+        <div class="slider_logo">
+            <img src="./assets/logo.png" alt="Spacece Logo">
+        </div>
+        <ul class="slider_menu nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <!-- Programs -->
+            <li class="slider_menu dropdown">
+                <a href="#">Programs <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="slider_menu dropdown-menu">
+                    <li><a href="./Programs/start_your_school.html">Start Your School</a></li>
+                    <li><a href="./Programs/upgrade_your_school.html">Upgrade Your School</a></li>
+                    <li><a href="./Programs/parents_toddler_program.html">Parents & Toddler Program</a></li>
+                </ul>
+            </li>
+
+            <!-- PTTC -->
+            <li><a href="PTTC.html">PTTC</a></li>
+
+            <!-- Admissions -->
+            <li class="sliderbar_menu dropdown">
+                <a href="Admission.html">Admissions</a>
+            </li>
+
+            <!-- About Us -->
+            <li class="sliderbar_menu dropdown">
+                <a href="./Aboutus/Aboutus.html">About Us <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="sliderbar_menu dropdown-menu">
+                    <li><a href="./Aboutus/Contactus.html">Contact Us</a></li>
+                    <li><a href="./Aboutus/Our_vision.html">Our Vision & Mission</a></li>
+                    <li><a href="./Aboutus/Our_Team.html">Our Team</a></li>
+                </ul>
+            </li>
+
+            <!-- Resources -->
+            <li class="sliderbar_menu dropdown">
+                <a href="#">Resources <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="sliderbar_menu dropdown-menu">
+                    <li><a href="./Resources/Blogs.html">Blogs</a></li>
+                    <li><a href="./Resources/Parent_guides.html">Parent Guides</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </nav>
+  </div>
+</section>
+
+<!-- ==================== Hero Section ==================== -->
+<section class="admission-hero">
+  <div class="container hero-container">
+    <div class="hero-text">
+      <h1>🎓 Admissions Open at Kreedo Preschool</h1>
+      <p>Nurturing curious minds through joyful, play-based learning for 1-2 year old kids.</p>
+      <div class="hero-buttons">
+        <a href="#enquiry-form" class="btn btn-primary">Apply for Admission</a>
+        <a href="#schedule-visit" class="btn btn-secondary">Schedule a School Visit</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/admission.jpeg" alt="Happy toddlers playing" />
+    </div>
+  </div>
+</section>
+
+<!-- ========================= Why Choose Kreedo Section ========================= -->
+<section class="why-kredo">
+  <div class="container">
+    <h2>Why Choose Kreedo for Your Child?</h2>
+    <p class="subtitle">Building trust with parents through quality early education</p>
+    <div class="features">
+      <div class="feature">
+        <span class="icon">🎨</span>
+        <h3>Play-based & Activity-Oriented</h3>
+        <p>Engaging activities that make learning fun and interactive for every child.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">📚</span>
+        <h3>NEP 2020 Aligned</h3>
+        <p>Our curriculum follows the latest National Education Policy for holistic growth.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">👩‍🏫</span>
+        <h3>Trained & Certified Educators</h3>
+        <p>Experienced teachers who nurture and guide your child with care.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🏡</span>
+        <h3>Safe & Child-Friendly Environment</h3>
+        <p>A hygienic, secure space where children feel comfortable and happy.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🌱</span>
+        <h3>Holistic Development</h3>
+        <p>Focus on cognitive, social, and emotional growth for overall development.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= Programs Offered Timeline Section ========================= -->
+<section class="programs-timeline">
+  <div class="container">
+    <h2>Our Preschool Programs</h2>
+    <p class="subtitle">Clear age-wise progression for your child’s early learning journey</p>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="age-circle">1.8 – 2.5</div>
+        <div class="timeline-content">
+          <h3>Playgroup</h3>
+          <p>Introduction to group activities and basic social skills through fun play.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="age-circle">2.5 – 3.5</div>
+        <div class="timeline-content">
+          <h3>Nursery</h3>
+          <p>Early learning with structured play, language exposure, and motor skills.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="age-circle">3.5 – 4.5</div>
+        <div class="timeline-content">
+          <h3>Junior KG</h3>
+          <p>Foundation of reading, writing, and creative expression in a playful environment.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="age-circle">4.5 – 5.5</div>
+        <div class="timeline-content">
+          <h3>Senior KG</h3>
+          <p>Preparation for school with advanced cognitive, social, and emotional development.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================= Admission Process Banner ========================= -->
+<section class="admission-banner">
+  <div class="container">
+    <h2>Simple 4-Step Admission Process</h2>
+    <p class="subtitle">Smooth and fun enrollment journey for your little one</p>
+    
+    <div class="admission-steps">
+      <div class="step">
+        <div class="icon">📝</div>
+        <div class="step-number">1</div>
+        <p>Enquiry / Online Form Submission</p>
+      </div>
+      <div class="step">
+        <div class="icon">🏫</div>
+        <div class="step-number">2</div>
+        <p>Counselling & School Visit</p>
+      </div>
+      <div class="step">
+        <div class="icon">👶</div>
+        <div class="step-number">3</div>
+        <p>Interaction & Age Eligibility Check</p>
+      </div>
+      <div class="step">
+        <div class="icon">✅</div>
+        <div class="step-number">4</div>
+        <p>Admission Confirmation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</style>
+
+
+
+
+
+
+
+
+
+<!-- ============================  Footer  =============================== -->
+<footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <!-- Column 1: Logo + Social -->
+        <div class="footer-section">
+            <img src="assets/logo.png" class="footer-logo" alt="Preschool Logo">
+
+            <p class="footer-text">
+                Building bright futures with joyful learning.
+            </p>
+
+            <!-- Google Map -->
+            <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.713390921391!2d73.80806407371841!3d18.45131787128889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc29513dc000001%3A0x6bcacb06efbe645c!2sSpacECE%20INDIA%20FOUNDATION!5e0!3m2!1sen!2sin!4v1764842317194!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+
+
+        <!-- Column 2: Contact Form (Parents Admission Inquiry) -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+
+            <form class="footer-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="text" placeholder="Your Phone">
+                <select>
+                    <option>Select Program</option>
+                    <option>Playgroup</option>
+                    <option>Nursery</option>
+                    <option>Jr. KG</option>
+                    <option>Sr. KG</option>
+                </select>
+                <textarea placeholder="Message"></textarea>
+                <button type="submit" class="footer-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <div class="link-wrap">
+              <ul class="footer-links">
+                <li><a href="#">About Preschool</a></li>
+                <li><a href="#">Our Programs</a></li>
+                <li><a href="#">Our Vision</a></li>
+              </ul>
+              <ul class="footer-links">
+                <li><a href="#">Parent Resources</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/SpacECE/"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.twitter.com/SpacECE/"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.instagram.com/SpacECE/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.youtube.com/SpacECE/"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.Whatsapp.com/SpacECE/"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        © 2025 Your Preschool Name — All Rights Reserved
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============================  Dropdown button  =============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.querySelector(".dropdown > a");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    dropdown.addEventListener("click", function (e) {
+        e.preventDefault(); 
+        dropdownMenu.style.display =
+            dropdownMenu.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!dropdown.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.style.display = "none";
+        }
+    });
+});
+</script>
+
+<!-- ============================ Slider Menu Button =============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menu = document.querySelector(".menu_btn_info");  // RIGHT SIDEBAR
+    const overlay = document.querySelector(".overlay");     // DARK BACKGROUND
+    const menuBtn = document.querySelector(".menu-btn");    // ☰ BUTTON
+    const closeBtn = document.querySelector(".close-btn");  // CROSS BUTTON
+
+    // OPEN MENU
+    menuBtn.addEventListener("click", () => {
+        menu.classList.add("active");
+        overlay.classList.add("show");
+    });
+
+    // CLOSE MENU (X button)
+    closeBtn.addEventListener("click", () => {
+        menu.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+    // CLOSE MENU when clicking outside
+    overlay.addEventListener("click", () => {
+        menu.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+});
+</script>
+
+<!-- ============================ Slider Dropdown Menu  =============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // MOBILE MENU OPEN
+    const menuBtn = document.querySelector(".menu-btn");
+    const sidebar = document.querySelector(".menu_btn_info");
+    const overlay = document.querySelector(".overlay");
+    const closeBtn = document.querySelector(".close-btn");
+
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.add("active");
+        overlay.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+    overlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+    // ⭐ MOBILE DROPDOWN OPEN/CLOSE ON CLICK
+    const dropdowns = document.querySelectorAll(".menu_btn_info .dropdown");
+
+    dropdowns.forEach(drop => {
+        drop.addEventListener("click", function (e) {
+            e.stopPropagation();
+            this.classList.toggle("open");
+        });
+    });
+});
+</script>
+
+<!-- ============================ Equairy form popup-box =============================== -->
+<script>
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+        document.body.classList.add("no-scroll");
+    }
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.body.classList.remove("no-scroll");
+    }
+</script>
+</body>
+</html>
