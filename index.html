@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asmisssion</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -12,151 +13,240 @@
 <style>
 /* ==================== Hero Section CSS ==================== */
 .admission-hero {
-  padding: 80px 0;
-  background: linear-gradient(to right, #ffe29f, #ffd071);
-  color: #1a1a1a;
+  padding: 50px 0;
+  background: linear-gradient(135deg, #ffe29f, #ffd071, #ffecb3);
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-container {
+/* decorative blobs */
+.admission-hero::before,
+.admission-hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+}
+
+.admission-hero::before {
+  width: 280px;
+  height: 280px;
+  background: #ff9800;
+  top: -80px;
+  left: -80px;
+}
+
+.admission-hero::after {
+  width: 350px;
+  height: 350px;
+  background: #fff;
+  bottom: -120px;
+  right: -120px;
+}
+
+.admission-hero .hero-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 2;
+  margin: 0px -15px;
 }
 
-.hero-text {
-  flex: 1;
-  min-width: 300px;
+.admission-hero .hero-text {
+    width: 50%;
+    padding: 0px 15px;
 }
 
-.hero-text h1 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
+.admission-hero .hero-text h1 {
+  font-size: 50px;
+  font-weight: 800;
+  margin: 10px 0px 0px 0px;
+  font-family: "Livvic", Sans-serif;
+  line-height: 1.3;
 }
 
-.hero-text p {
+.admission-hero .hero-text p {
   font-size: 18px;
+  line-height: 1.6;
   margin-bottom: 30px;
+  max-width: 480px;
+  font-family: "Noto Sans", sans-serif;
 }
 
-.hero-buttons .btn {
-  padding: 12px 25px;
-  margin-right: 15px;
-  border-radius: 8px;
-  text-decoration: none;
+.admission-hero .hero-highlight {
+  display: inline-block;
+  background: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  font-family: "Noto Sans", sans-serif;
 }
 
-.btn-primary {
+.admission-hero .hero-buttons .btn {
+  padding: 14px 28px;
+  margin-right: 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.admission-hero .btn-primary {
   background-color: #ff9800;
   color: #fff;
+  box-shadow: 0 8px 18px rgba(255,152,0,0.4);
 }
 
-.btn-primary:hover {
-  background-color: #e68a00;
+.admission-hero .btn-primary:hover {
+  transform: translateY(-3px);
 }
 
-.btn-secondary {
+.admission-hero .btn-secondary {
   background-color: #fff;
   color: #ff9800;
-  border: 2px solid #ff9800;
+  border: 2px dashed #ff9800;
+  font-family: "Noto Sans", sans-serif;
 }
 
-.btn-secondary:hover {
+.admission-hero .btn-secondary:hover {
   background-color: #ff9800;
   color: #fff;
 }
 
-.hero-image {
-  flex: 1;
-  min-width: 300px;
+.admission-hero .hero-image {
+  width: 50%;
+  padding: 0px 15px;
+  text-align: center;
+  position: relative;
+}
+
+
+.admission-hero .hero-image img {
+  width: 100%;
+  max-width:90%;
+  border-radius: 50%;
+  background: #fff;
+  padding: 12px;
+  display: block;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+  animation: float 4s ease-in-out infinite;
+}
+
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+
+/* ========================= Why Choose Kreedo Section ========================= */
+.why-kredo {
+  background: linear-gradient(180deg, #fff7e6, #ffffff);
+  padding: 50px 0;
   text-align: center;
 }
 
-.hero-image img {
-  max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+.why-kredo h2 {
+  font-family: "Livvic", Sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #1f2937;
+  margin: 0px 0px 10px 0px;
+  letter-spacing: 0.8px;
 }
 
-/* ========================= Why Choose Kreedo Section ========================= */
-  .why-kredo {
-    background-color: #f9f9f9;
-    padding: 80px 20px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-  }
+.why-kredo .subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 60px;
+  font-family: "Livvic", sans-serif;
+}
 
-  .why-kredo .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+.why-kredo .features {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px -15px;
 
-  .why-kredo h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #1f2937;
-    margin-bottom: 10px;
-  }
+}
 
-  .why-kredo .subtitle {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 50px;
-  }
+.why-kredo .feature_box {
+  position: relative;
+  padding: 0px 15px;
+  width: 33.33%;
+}
 
-  .why-kredo .features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
+.why-kredo .feature {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 22px;
+  /* width: 280px; */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  position: relative;
+}
 
+.why-kredo .feature:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* .why-kredo .feature.highlight {
+  border: 3px dashed #fbbf24;
+  transform: scale(1.05);
+} */
+
+.why-kredo .icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.why-kredo .bg-pink { background: #ffe4e6; }
+.why-kredo .bg-yellow { background: #fef3c7; }
+.why-kredo .bg-blue { background: #e0f2fe; }
+.why-kredo .bg-green { background: #dcfce7; }
+.why-kredo .bg-purple { background: #ede9fe; }
+
+.why-kredo .feature h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+  font-family: "Livvic", sans-serif;
+}
+
+.why-kredo .feature p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  font-family: "Livvic", sans-serif;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
   .why-kredo .feature {
-    background-color: #ffffff;
-    padding: 30px 20px;
-    border-radius: 15px;
-    width: 250px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 90%;
   }
+}
 
-  .why-kredo .feature:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-  }
-
-  .why-kredo .feature .icon {
-    font-size: 40px;
-    display: block;
-    margin-bottom: 20px;
-  }
-
-  .why-kredo .feature h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #111827;
-  }
-
-  .why-kredo .feature p {
-    font-size: 15px;
-    color: #555;
-    line-height: 1.6;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .why-kredo .features {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .why-kredo .feature {
-      width: 80%;
-    }
-  }
 /* ========================= Programs Offered Timeline Section ========================= */
   .programs-timeline {
     background: linear-gradient(120deg, #fef3c7, #dbeafe);
@@ -361,7 +451,7 @@
   <div class="container">
     <nav class="navbar">
         <div class="logo">
-            <img src="./assets/logo.png" alt="Spacece Logo">
+            <img src="assets/logo.png" alt="Spacece Logo">
         </div>
 
         <ul class="nav-links">
@@ -372,9 +462,9 @@
             <li class="dropdown">
                 <a href="#">Programs <i class="fa-solid fa-angle-down"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="./Programs/start_your_school.html">Start Your School</a></li>
-                    <li><a href="./Programs/upgrade_your_school.html">Upgrade Your School</a></li>
-                    <li><a href="./Programs/parents_toddler_program.html">Parents & Toddler Program</a></li>
+                    <li><a href="Programs/start_your_school.html">Start Your School</a></li>
+                    <li><a href="Programs/upgrade_your_school.html">Upgrade Your School</a></li>
+                    <li><a href="Programs/parents_toddler_program.html">Parents & Toddler Program</a></li>
                 </ul>
             </li>
 
@@ -390,9 +480,9 @@
             <li class="dropdown">
                 <a href="Aboutus.html">About Us <i class="fa-solid fa-angle-down"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="./Aboutus/Contactus.html">Contact Us</a></li>
-                    <li><a href="./Aboutus/Our_vision.html">Our Vision & Mission</a></li>
-                    <li><a href="./Aboutus/Our_Team.html">Our Team</a></li>
+                    <li><a href="Aboutus/Contactus.html">Contact Us</a></li>
+                    <li><a href="Aboutus/Our_vision.html">Our Vision & Mission</a></li>
+                    <li><a href="Aboutus/Our_Team.html">Our Team</a></li>
                 </ul>
             </li>
 
@@ -400,8 +490,8 @@
             <li class="dropdown">
                 <a href="Resources.html">Resources <i class="fa-solid fa-angle-down"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="./Resources/Blogs.html">Blogs</a></li>
-                    <li><a href="./Resources/Parent_guides.html">Parent Guides</a></li>
+                    <li><a href="Resources/Blogs.html">Blogs</a></li>
+                    <li><a href="Resources/Parent_guides.html">Parent Guides</a></li>
                 </ul>
             </li>
 
@@ -489,7 +579,7 @@
         <button class="close-btn">×</button>
 
         <div class="slider_logo">
-            <img src="./assets/logo.png" alt="Spacece Logo">
+            <img src="assets/logo.png" alt="Spacece Logo">
         </div>
         <ul class="slider_menu nav-links">
 
@@ -499,9 +589,9 @@
             <li class="slider_menu dropdown">
                 <a href="#">Programs <i class="fa-solid fa-angle-right"></i></a>
                 <ul class="slider_menu dropdown-menu">
-                    <li><a href="./Programs/start_your_school.html">Start Your School</a></li>
-                    <li><a href="./Programs/upgrade_your_school.html">Upgrade Your School</a></li>
-                    <li><a href="./Programs/parents_toddler_program.html">Parents & Toddler Program</a></li>
+                    <li><a href="Programs/start_your_school.html">Start Your School</a></li>
+                    <li><a href="Programs/upgrade_your_school.html">Upgrade Your School</a></li>
+                    <li><a href="Programs/parents_toddler_program.html">Parents & Toddler Program</a></li>
                 </ul>
             </li>
 
@@ -515,11 +605,11 @@
 
             <!-- About Us -->
             <li class="sliderbar_menu dropdown">
-                <a href="./Aboutus/Aboutus.html">About Us <i class="fa-solid fa-angle-right"></i></a>
+                <a href="Aboutus/Aboutus.html">About Us <i class="fa-solid fa-angle-right"></i></a>
                 <ul class="sliderbar_menu dropdown-menu">
-                    <li><a href="./Aboutus/Contactus.html">Contact Us</a></li>
-                    <li><a href="./Aboutus/Our_vision.html">Our Vision & Mission</a></li>
-                    <li><a href="./Aboutus/Our_Team.html">Our Team</a></li>
+                    <li><a href="Aboutus/Contactus.html">Contact Us</a></li>
+                    <li><a href="Aboutus/Our_vision.html">Our Vision & Mission</a></li>
+                    <li><a href="Aboutus/Our_Team.html">Our Team</a></li>
                 </ul>
             </li>
 
@@ -527,8 +617,8 @@
             <li class="sliderbar_menu dropdown">
                 <a href="#">Resources <i class="fa-solid fa-angle-right"></i></a>
                 <ul class="sliderbar_menu dropdown-menu">
-                    <li><a href="./Resources/Blogs.html">Blogs</a></li>
-                    <li><a href="./Resources/Parent_guides.html">Parent Guides</a></li>
+                    <li><a href="Resources/Blogs.html">Blogs</a></li>
+                    <li><a href="Resources/Parent_guides.html">Parent Guides</a></li>
                 </ul>
             </li>
 
@@ -540,55 +630,76 @@
 
 <!-- ==================== Hero Section ==================== -->
 <section class="admission-hero">
-  <div class="container hero-container">
-    <div class="hero-text">
-      <h1>🎓 Admissions Open at Kreedo Preschool</h1>
-      <p>Nurturing curious minds through joyful, play-based learning for 1-2 year old kids.</p>
-      <div class="hero-buttons">
-        <a href="#enquiry-form" class="btn btn-primary">Apply for Admission</a>
-        <a href="#schedule-visit" class="btn btn-secondary">Schedule a School Visit</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <img src="assets/admission.jpeg" alt="Happy toddlers playing" />
+  <div class="container">
+    <div class="hero-container">
+        <div class="hero-text">
+            <span class="hero-highlight">👶 For Toddlers (1–3 Years)</span>
+
+            <h1><span>🧸</span> Little Steps <br>Begin at Kreedo</br></h1>
+
+            <p>
+            A joyful, safe and activity-based learning space for your toddler.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#enquiry-form" class="btn btn-primary">Apply for Admission</a>
+                <a href="#schedule-visit" class="btn btn-secondary">Visit Our Preschool</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+        <img src="assets/Happy_toddlers_playing.png" alt="Happy toddlers playing" />
+        </div>
     </div>
   </div>
 </section>
+
 
 <!-- ========================= Why Choose Kreedo Section ========================= -->
 <section class="why-kredo">
   <div class="container">
     <h2>Why Choose Kreedo for Your Child?</h2>
-    <p class="subtitle">Building trust with parents through quality early education</p>
+    <p class="subtitle">A joyful beginning for your little one’s learning journey</p>
+
     <div class="features">
+    <div class="feature_box">
+        <div class="feature">
+            <span class="icon bg-pink">🎨</span>
+            <h3>Play-based Learning</h3>
+            <p>Fun activities that keep toddlers engaged and curious every day.</p>
+        </div>
+    </div>
+    <div class="feature_box">
       <div class="feature">
-        <span class="icon">🎨</span>
-        <h3>Play-based & Activity-Oriented</h3>
-        <p>Engaging activities that make learning fun and interactive for every child.</p>
-      </div>
-      <div class="feature">
-        <span class="icon">📚</span>
+        <span class="icon bg-yellow">📚</span>
         <h3>NEP 2020 Aligned</h3>
-        <p>Our curriculum follows the latest National Education Policy for holistic growth.</p>
+        <p>A modern curriculum designed for holistic early childhood development.</p>
       </div>
+    </div>
+    <div class="feature_box">
       <div class="feature">
-        <span class="icon">👩‍🏫</span>
-        <h3>Trained & Certified Educators</h3>
-        <p>Experienced teachers who nurture and guide your child with care.</p>
+        <span class="icon bg-blue">👩‍🏫</span>
+        <h3>Trained Educators</h3>
+        <p>Certified teachers who care, guide, and nurture with love.</p>
       </div>
+    </div>
+    <div class="feature_box">
       <div class="feature">
-        <span class="icon">🏡</span>
-        <h3>Safe & Child-Friendly Environment</h3>
-        <p>A hygienic, secure space where children feel comfortable and happy.</p>
+        <span class="icon bg-green">🏡</span>
+        <h3>Safe Environment</h3>
+        <p>A secure, hygienic and child-friendly space for happy learning.</p>
       </div>
+    </div>
+    <div class="feature_box">
       <div class="feature">
-        <span class="icon">🌱</span>
-        <h3>Holistic Development</h3>
-        <p>Focus on cognitive, social, and emotional growth for overall development.</p>
+        <span class="icon bg-purple">🌱</span>
+        <h3>Holistic Growth</h3>
+        <p>Supporting cognitive, emotional & social development together.</p>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- ========================= Programs Offered Timeline Section ========================= -->
 <section class="programs-timeline">
